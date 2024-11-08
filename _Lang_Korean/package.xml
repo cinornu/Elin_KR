@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Meta>
+  <title>Korean Language</title>
+  <id>elin_language_korean</id>
+  <author>cinornu</author>
+  <builtin>true</builtin>
+  <loadPriority>-10</loadPriority>
+  <version>0.22.1</version>
+  <description>Add Korean Language for Elin
+  </description>
+</Meta>
