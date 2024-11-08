@@ -1,1 +1,1 @@
-父亲#father和母亲#mother在#year年#month月#day日#birthloc2于#birthloc生下了#aka「#name」。#aka「#name」之后的经历基本不为人所知。作为#job成长的#he，与前往米西利亚的商队同行，但在古老森林中迷失，昏倒后被可疑的二人组所搭救。
+#aka「#name」는 #year년 #month월 #day일, #birthloc2의 #birthloc에서 아버지 #father와 어머니 #mother 사이에서 태어났다. #he의 이후 행적에 대해선 알려진 바가 거의 없다. #job으로 성장한 #he은(는) 미실리아로 향하는 상단에 합류해 여행을 하던 중 오래된 숲에서 길을 잃어버렸고, 쓰러져 있는 것을 발견한 정체를 알 수 없는 두 명의 인간에게 도움을 받았다고 전해진다.
