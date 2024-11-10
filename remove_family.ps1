@@ -1,5 +1,6 @@
 ﻿# 현재 폴더 내의 모든 .xlsx 파일을 대상으로 작업 수행
 $xlsxFiles = Get-ChildItem -Path (Get-Location) -Filter *.xlsx
+$updatedFiles = @() # -updated 파일 목록을 저장할 배열
 
 foreach ($xlsxFile in $xlsxFiles) {
     Write-Output "Processing file: $($xlsxFile.FullName)"
@@ -35,7 +36,7 @@ foreach ($xlsxFile in $xlsxFiles) {
     Remove-FamilyTag -xmlPath $stylesXmlPath
     Remove-FamilyTag -xmlPath $sharedStringsXmlPath
 
-    # 압축하여 원본 파일 대체
+    # 압축하여 -updated 파일 생성
     $updatedXlsxPath = Join-Path -Path (Get-Location) -ChildPath "$($xlsxFile.BaseName)-updated.xlsx"
     if (Test-Path $updatedXlsxPath) { Remove-Item -Path $updatedXlsxPath -Force }
     [System.IO.Compression.ZipFile]::CreateFromDirectory($unzipFolder, $updatedXlsxPath)
@@ -44,4 +45,22 @@ foreach ($xlsxFile in $xlsxFiles) {
 
     # 임시 폴더 삭제
     Remove-Item -Recurse -Force -Path $unzipFolder
+
+    # -updated 파일 목록에 추가
+    $updatedFiles += [PSCustomObject]@{Original = $xlsxFile.FullName; Updated = $updatedXlsxPath}
+}
+
+# 패치 적용 여부 확인 메시지
+$userInput = Read-Host "Do you want to replace all original files with the updated versions? (Y/N)"
+if ($userInput -eq "Y") {
+    foreach ($file in $updatedFiles) {
+        # 원본 파일 삭제 및 -updated 파일 이름 변경
+        if (Test-Path -Path $file.Original) {
+            Remove-Item -Path $file.Original -Force
+            Rename-Item -Path $file.Updated -NewName (Split-Path -Path $file.Original -Leaf)
+            Write-Output "Replaced original file with the updated version: $file.Original"
+        }
+    }
+} else {
+    Write-Output "Skipped replacing original files. Updated files remain in their -updated versions."
 }
