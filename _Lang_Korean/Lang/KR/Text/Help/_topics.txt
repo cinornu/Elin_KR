@@ -1,33 +1,33 @@
-general-2,操作とショートカット
-general-1,新米冒険者への手引き
-general-3,冒険のヒント
-general-FAQ,FAQ（よくある質問）
-game-,$旅の知恵【基本】
-game-attribute,能力値
-game-condition,状態と状態異常
-game-party_ability,アビリティの使用
-game-item,アイテムと装備品
-game-identify,鑑定
-game-tool,様々なツールとその役目
-game-craft,クラフトと加工
-game-recipe,レシピの習得
-game_base-,$旅の知恵【拠点】
-game_base-livestock,住人と家畜
-game_base-policy,ポリシーとスキル
-game_base-elec,電力
-game-,$旅の知恵【便利機能】
-game-autocombat,オートコンバット
-game-item_search,アイテム検索
-game-autodump,自動整頓
-game-mark_important,大事なものの指定
-system-,$旅の知恵【システム】
-system-backup,バックアップの復元
-custom-,$カスタムコンテンツ
-custom-map,カスタムマップ
-custom-replace,画像の差し替え
-custom-terms,アップローダー利用規約
-other-,$クレジットなど
-credits-2,クレジット
-credits-1,素材提供
-other-fanwork,二次創作と配信ガイドライン
-other-gallery,画集について
+general-2,조작과 숏컷
+general-1,초보 모험가 안내
+general-3,모험의 힌트
+general-FAQ,FAQ (흔히 있는 질문)
+game-,$여행의 지혜【기본】
+game-attribute,능력치
+game-condition,상태와 상태이상
+game-party_ability,어빌리티의 사용
+game-item,아이템과 장비품
+game-identify,감정
+game-tool,다양한 도구와 그 역할
+game-craft,크래프트와 가공
+game-recipe,레시피의 습득
+game_base-,$여행의 지혜【거점】
+game_base-livestock,주민과 가축
+game_base-policy,정책과 스킬
+game_base-elec,전력
+game-,$여행의 지혜【편리기능】
+game-autocombat,오토 컴뱃
+game-item_search,아이템 검색
+game-autodump,자동 정리
+game-mark_important,중요한 물건 지정
+system-,$여행의 지혜【시스템】
+system-backup,백업의 복원
+custom-,$커스텀 컨텐츠
+custom-map,커스텀 맵
+custom-replace,이미지 변경
+custom-terms,업로더의 이용 규약
+other-,$크레딧 등
+credits-2,크레딧
+credits-1,소재 제공
+other-fanwork,2차 창작과 커뮤니티 가이드라인
+other-gallery,갤러리에 대해서
