@@ -1,8 +1,0 @@
-검색어: 가수
-
-파일명: Chara.xlsx, 시트명: Chara
-파일명: General.xlsx, 시트명: General
-파일명: Job.xlsx, 시트명: Job
-파일명: Person.xlsx, 시트명: Person
-파일명: Quest.xlsx, 시트명: Quest
-파일명: Word.xlsx, 시트명: Word
