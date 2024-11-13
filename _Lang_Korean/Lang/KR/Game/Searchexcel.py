@@ -5,7 +5,7 @@ from openpyxl import load_workbook
 search_text = input("검색할 텍스트를 입력하세요: ")
 
 # 폴더 경로 설정
-folder_path = "C:/Users/Utilisateur/Documents/GitHub/Elin_KR/_Lang_Korean/Lang/KR/game"  # 엑셀 파일이 있는 폴더 경로
+folder_path = "C:/Users/admin/Documents/GitHub/Elin_KR/_Lang_Korean/Lang/KR/game"  # 엑셀 파일이 있는 폴더 경로
 
 # 결과 저장 리스트
 results = []
