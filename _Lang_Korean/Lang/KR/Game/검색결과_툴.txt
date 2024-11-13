@@ -1,0 +1,6 @@
+검색어: 툴
+
+파일명: Category.xlsx, 시트명: Category
+파일명: Element.xlsx, 시트명: Element
+파일명: General.xlsx, 시트명: General
+파일명: Thing.xlsx, 시트명: Thing
