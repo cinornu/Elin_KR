@@ -44,7 +44,9 @@ output_filename = f"검색결과_{search_text}.txt"  # 검색어를 포함한 �
 with open(output_filename, "w", encoding="utf-8") as output_file:
     output_file.write(f"검색어: {search_text}\n\n")  # 검색어를 파일에 기록
     if results:
+        print("\n검색 결과: ")
         for result in results:
+            print(f"파일명: {result[0]}, 시트명: {result[1]}")
             output_file.write(f"파일명: {result[0]}, 시트명: {result[1]}\n")
         print(f"검색 결과가 '{output_filename}'로 저장되었습니다.")
     else:
