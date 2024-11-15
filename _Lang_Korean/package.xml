@@ -3,9 +3,8 @@
   <title>Korean Language</title>
   <id>elin_language_korean</id>
   <author>cinornu</author>
-  <builtin>true</builtin>
-  <loadPriority>-10</loadPriority>
-  <version>0.22.1</version>
+  <loadPriority>0</loadPriority>
+  <version>0.23.26</version>
   <description>Add Korean Language for Elin
   </description>
 </Meta>
