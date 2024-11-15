@@ -8,7 +8,7 @@ search_text = input("검색할 텍스트를 입력하세요: ")
 # 폴더 경로 설정
 # Elin_KR 폴더에 있는 것을 가정
 path_dir = str(pathlib.Path(__file__).parent.resolve())
-array_path = [path_dir + "\_Lang_Korean\Lang\KR\data", path_dir + "\_Lang_Korean\Lang\KR\dialog", path_dir + "\_Lang_Korean\Lang\KR\dialog\drama", path_dir + "\_Lang_Korean\Lang\KR\game"]
+array_path = [path_dir + "\Mod_Korean\Lang\KR\data", path_dir + "\Mod_Korean\Lang\KR\dialog", path_dir + "\Mod_Korean\Lang\KR\dialog\drama", path_dir + "\Mod_Korean\Lang\KR\game"]
 
 # 결과 저장 리스트
 results = []
