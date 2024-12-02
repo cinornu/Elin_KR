@@ -1,0 +1,23 @@
+공백 셀 검색 결과; 일자: 2024-11-27 204103
+
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Dialog\Drama\corgon.xlsx, 시트명: quru, 위치: text열, 46행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Dialog\Drama\corgon.xlsx, 시트명: quru, 위치: text열, 52행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Dialog\Drama\ineien.xlsx, 시트명: fiama, 위치: text열, 14행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Dialog\Drama\_chara.xlsx, 시트명: chara, 위치: text열, 13행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Dialog\Drama\_chara.xlsx, 시트명: chara, 위치: text열, 30행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Dialog\Drama\_chara.xlsx, 시트명: chara, 위치: text열, 37행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Dialog\Drama\_chara.xlsx, 시트명: chara, 위치: text열, 45행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Dialog\Drama\_chara.xlsx, 시트명: chara, 위치: text열, 49행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Dialog\Drama\_main.xlsx, 시트명: fiama, 위치: text열, 21행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Dialog\Drama\_main.xlsx, 시트명: fiama, 위치: text열, 25행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Dialog\Drama\_main.xlsx, 시트명: fiama, 위치: text열, 39행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\Element.xlsx, 시트명: Element, 위치: levelBonus열, 86행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\Element.xlsx, 시트명: Element, 위치: levelBonus열, 98행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\Element.xlsx, 시트명: Element, 위치: levelBonus열, 99행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\Element.xlsx, 시트명: Element, 위치: levelBonus열, 116행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\Element.xlsx, 시트명: Element, 위치: levelBonus열, 423행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\General.xlsx, 시트명: General, 위치: text열, 4행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\General.xlsx, 시트명: General, 위치: text열, 30행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\List.xlsx, 시트명: List, 위치: text열, 3행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\Quest.xlsx, 시트명: Quest, 위치: detail열, 19행
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\Quest.xlsx, 시트명: Quest, 위치: detail열, 20행
