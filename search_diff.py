@@ -186,13 +186,13 @@ for i in range(0, len(array_file)):
                         if target[0] == p[0]:
                             founded = True
                             break
-                        # id를 curr에서 못찾음 = 이 행은 삭제된 행임
-                        if not founded:
-                            # 제거된 행 배열에 추가하고 기존 배열에서 제거
-                            row_deleted.append(target)
-                            row_for_diff.remove(target)
-                            num = row_prev.index(target) + 1
-                            row_number.remove(num)
+                    # id를 curr에서 못찾음 = 이 행은 삭제된 행임
+                    if not founded:
+                        # 제거된 행 배열에 추가하고 기존 배열에서 제거
+                        row_deleted.append(target)
+                        row_for_diff.remove(target)
+                        num = row_prev.index(target) + 1
+                        row_number.remove(num)
 
         # 결과 저장
         results.append((array_file[i], sheet_name, row_curr, row_for_diff, row_number, row_new, row_deleted))
