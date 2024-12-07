@@ -1,0 +1,9 @@
+3,A+ +D
+4,A2+ +D
+20,NAME+의 +D
+15,ALIAS+의 +D
+60,$god+의 +D
+60,$god+ +D
+8,$parent+의 +D
+8,$parent+ +D
+1,$adv+ +D
