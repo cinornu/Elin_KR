@@ -48,6 +48,12 @@ if version == version_prev:
         pass
     else:
         exit()
+else:
+    yesno = input(f"과거판 버전: {version_prev}\n현재판 버전: {version}\n검색을 시작합니까? (y/n): ")
+    if yesno == "y" or yesno == "Y":
+        pass
+    else:
+        exit()
 
 # 각 폴더 경로 지정
 array_path = []
