@@ -1,13 +1,13 @@
 Updated Language Files:
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/General.xlsx
-version:2473  text:2470  
+version:2479  text:2476  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/List.xlsx
 version:102  text:101  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Game.xlsx
-version:899  text:898  
+version:900  text:899  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Word.xlsx
 version:484  name:484  
@@ -199,7 +199,7 @@ version:10  name:10  detail:10
 204
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR\Dialog\dialog.xlsx(general)
-72
+73
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR\Dialog\dialog.xlsx(rumor)
 19
