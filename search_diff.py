@@ -176,7 +176,7 @@ for i in range(0, len(array_file)):
                     # id를 prev에서 못찾았음 = 이 행이 새로 추가된 행임
                     if not founded:
                         # 새 행 배열에 추가하고 기존 배열에서 제거
-                        row_new.append((target, row_curr_for_check.index(target) + 1))
+                        row_new.append(target)
                         row_curr.remove(target)
             # 기존 행이 제거되었을 때 -> curr에 해당 행의 id가 있는지 체크
             if len(row_curr) < len(row_for_diff):
@@ -194,8 +194,41 @@ for i in range(0, len(array_file)):
                         num = row_prev.index(target) + 1
                         row_number.remove(num)
 
+        # 현재판 파일에서 행수 탐색하여 저장
+        arr_result_change = []
+        arr_result_change_diff = []
+        arr_result_new = []
+        arr_result_deleted = []
+
+        if row_curr != []:
+            for row in row_curr:
+                num = row_curr_for_check.index(row) + 1
+                arr_result_change.append((num, row))
+            # 결과물 행수 기준 정렬
+            arr_result_change.sort(key = lambda x:x[0])
+
+        if row_for_diff != []:
+            for row in row_for_diff:
+                num = row_prev.index(row) + 1
+                arr_result_change_diff.append((num, row))
+            arr_result_change_diff.sort(key = lambda x:x[0])
+
+        if row_new != []:
+            for row in row_new:
+                num = row_curr_for_check.index(row) + 1
+                arr_result_new.append((num, row))
+            arr_result_new.sort(key = lambda x:x[0])
+
+        if row_deleted != []:
+            for row in row_deleted:
+                num = row_prev.index(row) + 1
+                arr_result_deleted.append((num, row))
+            arr_result_deleted.sort(key = lambda x:x[0])
+
         # 결과 저장
-        results.append((array_file[i], sheet_name, row_curr, row_for_diff, row_number, row_new, row_deleted))
+        # row_number는 필요 없음
+        #results.append((array_file[i], sheet_name, row_curr, row_for_diff, row_number, row_new, row_deleted))
+        results.append((array_file[i], sheet_name, arr_result_change, arr_result_change_diff, arr_result_new, arr_result_deleted))
 
 count_diff = 0
 
@@ -207,50 +240,51 @@ with open(output_filename, "w", encoding="utf-8") as output_file:
         print("\n결과: ")
         for result in results:
             # 실제로 유효한 결과가 존재할 때
-            if result[2] != [] or result[3] != [] or result[5] != [] or result[6] != []:
+            if result[2] != [] or result[3] != [] or result[4] != [] or result[5] != []:
                 print(f"파일명: {result[0]}, 시트명: {result[1]} - 차이점 있음\n")
                 output_file.write(f"파일명: {result[0]}, 시트명: {result[1]} - 차이점 있음\n\n")
 
                 # 새 행이 추가됐을 때
-                if result[5] != []:
+                if result[4] != []:
                     print("[최신판에서 새로 추가된 행들]")
                     output_file.write("[최신판에서 새로 추가된 행들]\n")
-                    for target in result[5]:
-                        print(f"    해당 행 번호: {target[1]}")
-                        output_file.write(f"    해당 행 번호: {target[1]}\n")
-                        print(f"    해당 행 id: {target[0][0]}\n")
-                        output_file.write(f"    해당 행 id: {target[0][0]}\n\n")
+                    for target in result[4]:
+                        print(f"    해당 행 번호: {target[0]}")
+                        output_file.write(f"    해당 행 번호: {target[0]}\n")
+                        print(f"    해당 행 id: {target[1][0]}\n")
+                        output_file.write(f"    해당 행 id: {target[1][0]}\n\n")
                         count_diff += 1
 
                 # 이전 행이 제거됐을 때
-                if result[6] != []:
+                if result[5] != []:
                     print("[최신판에서 제거된 행들]")
                     output_file.write("[최신판에서 제거된 행들]\n")
                     for target in result[5]:
-                        print(f"    해당 행 id: {target[0][0]}\n")
-                        output_file.write(f"    해당 행 id: {target[0][0]}\n\n")
+                        print(f"    해당 행 id: {target[1][0]}\n")
+                        output_file.write(f"    해당 행 id: {target[1][0]}\n\n")
                         count_diff += 1
 
                 # 차이가 발생한 행들에 대해
                 print("[최신판에서 변경된 행들]")
                 output_file.write("[최신판에서 변경된 행들]\n")
+
                 for r in range(0, len(result[2])):
                     # 하나의 row의 열수
-                    length_row = len(result[2][r])
+                    length_row = len(result[2][r][1])
                     result_refined = []
 
                     # 정확히 어느 부분이 다른지 체크
                     for index in range(0, length_row):
-                        if result[2][r][index] != result[3][r][index]:
-                            result_refined.append((index, result[3][r][index], result[2][r][index]))
+                        if result[2][r][1][index] != result[3][r][1][index]:
+                            result_refined.append((index, result[3][r][1][index], result[2][r][1][index]))
 
                     # 결과 출력
                     for rr in result_refined:
-                        print(f"    해당 셀 행/열: [{result[4][r]}, {rr[0]}]")
+                        print(f"    해당 셀 행/열: [{result[2][r][0]}, {rr[0]}]")
                         print(f"    과거판 내용: {rr[1]}")
                         print(f"    최신판 내용: {rr[2]}\n")
 
-                        output_file.write(f"    해당 셀 행/열: [{result[4][r]}, {rr[0]}]\n")
+                        output_file.write(f"    해당 셀 행/열: [{result[2][r][0]}, {rr[0]}]\n")
                         output_file.write(f"    과거판 내용: {rr[1]}\n")
                         output_file.write(f"    최신판 내용: {rr[2]}\n\n")
                         count_diff += 1
