@@ -232,6 +232,8 @@ for i in range(0, len(array_file)):
 
 count_diff = 0
 
+result_folder = path_dir + "\\diff_detail"
+
 # 결과를 텍스트 파일로 저장
 output_filename = f"비교결과_{version_prev}vs{version}.txt"
 with open(output_filename, "w", encoding="utf-8") as output_file:
