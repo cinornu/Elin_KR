@@ -149,16 +149,12 @@ for i in range(0, len(array_file)):
         row_prev = list(sheet_prev.iter_rows(values_only=True))
 
         # 현재 파일 행 - 과거 파일 행 을 시행해서, 남는 것이 차이점임
-        row_num = 1
         row_for_diff = []
-        row_number = []
         for row in row_prev:
             if row in row_curr:
                 row_curr.remove(row)
             else:
                 row_for_diff.append(row)
-                row_number.append(row_num)
-            row_num += 1
 
         # 새 행이 추가되거나 기존 행이 삭제되었을 경우 처리
         row_new = []
@@ -191,8 +187,6 @@ for i in range(0, len(array_file)):
                         # 제거된 행 배열에 추가하고 기존 배열에서 제거
                         row_deleted.append(target)
                         row_for_diff.remove(target)
-                        num = row_prev.index(target) + 1
-                        row_number.remove(num)
 
         # 현재판 파일에서 행수 탐색하여 저장
         arr_result_change = []
@@ -226,23 +220,24 @@ for i in range(0, len(array_file)):
             arr_result_deleted.sort(key = lambda x:x[0])
 
         # 결과 저장
-        # row_number는 필요 없음
-        #results.append((array_file[i], sheet_name, row_curr, row_for_diff, row_number, row_new, row_deleted))
-        results.append((array_file[i], sheet_name, arr_result_change, arr_result_change_diff, arr_result_new, arr_result_deleted))
+        results.append((array_file[i], sheet_name, arr_result_change, arr_result_change_diff, arr_result_new, arr_result_deleted, array_filename[i]))
 
-count_diff = 0
-
-result_folder = path_dir + "\\diff_detail"
+# 상세 결과 텍스트 파일들을 저장할 경로 지정
+result_folder = path_dir + "\\diff_detail" + f"_{version}"
+if not os.path.isdir(f'diff_detail_{version}'):
+    os.mkdir(f"diff_detail_{version}")
 
 # 결과를 텍스트 파일로 저장
-output_filename = f"비교결과_{version_prev}vs{version}.txt"
-with open(output_filename, "w", encoding="utf-8") as output_file:
-    output_file.write(f"비교: 과거판 (버전 {version_prev}) vs 최신판 (버전 {version})\n\n")
-    if results:
-        print("\n결과: ")
-        for result in results:
-            # 실제로 유효한 결과가 존재할 때
-            if result[2] != [] or result[3] != [] or result[4] != [] or result[5] != []:
+count_diff = 0
+if results:
+    print("\n결과: ")
+    for result in results:
+        # 대상 파일명 추출, 저장할 텍스트 파일명 지정
+        filename = result[6]
+        output_filename = result_folder + f"\\{filename}.txt"
+        if result[2] != [] or result[3] != [] or result[4] != [] or result[5] != []:
+            # 실제로 유효한 결과가 존재할 때만 텍스트 파일로 저장
+            with open(output_filename, "w", encoding="utf-8") as output_file:
                 print(f"파일명: {result[0]}, 시트명: {result[1]} - 차이점 있음\n")
                 output_file.write(f"파일명: {result[0]}, 시트명: {result[1]} - 차이점 있음\n\n")
 
@@ -267,41 +262,46 @@ with open(output_filename, "w", encoding="utf-8") as output_file:
                         count_diff += 1
 
                 # 차이가 발생한 행들에 대해
-                print("[최신판에서 변경된 행들]")
-                output_file.write("[최신판에서 변경된 행들]\n")
+                if result[3] != []:
+                    print("[최신판에서 변경된 행들]")
+                    output_file.write("[최신판에서 변경된 행들]\n")
 
-                for r in range(0, len(result[2])):
-                    # 하나의 row의 열수
-                    length_row = len(result[2][r][1])
-                    result_refined = []
+                    for r in range(0, len(result[2])):
+                        # 하나의 row의 열수
+                        length_row_curr = len(result[2][r][1])
+                        length_row_prev = len(result[3][r][1])
 
-                    # 정확히 어느 부분이 다른지 체크
-                    for index in range(0, length_row):
-                        if result[2][r][1][index] != result[3][r][1][index]:
-                            result_refined.append((index, result[3][r][1][index], result[2][r][1][index]))
+                        length_row = min(length_row_curr, length_row_prev)
 
-                    # 결과 출력
-                    for rr in result_refined:
-                        print(f"    해당 셀 행/열: [{result[2][r][0]}, {rr[0]}]")
-                        print(f"    과거판 내용: {rr[1]}")
-                        print(f"    최신판 내용: {rr[2]}\n")
+                        result_refined = []
+                        # 정확히 어느 부분이 다른지 체크
+                        for index in range(0, length_row):
+                            if result[2][r][1][index] != result[3][r][1][index]:
+                                result_refined.append((index, result[3][r][1][index], result[2][r][1][index]))
 
-                        output_file.write(f"    해당 셀 행/열: [{result[2][r][0]}, {rr[0]}]\n")
-                        output_file.write(f"    과거판 내용: {rr[1]}\n")
-                        output_file.write(f"    최신판 내용: {rr[2]}\n\n")
-                        count_diff += 1
+                        # 결과 출력
+                        for rr in result_refined:
+                            print(f"    해당 셀 행/열: [{result[2][r][0]}, {rr[0]}]")
+                            print(f"    과거판 내용: {rr[1]}")
+                            print(f"    최신판 내용: {rr[2]}\n")
 
-            else:
-                print(f"파일명: {result[0]}, 시트명: {result[1]} - 차이점 없음")
-        print(f"작업 결과가 '{output_filename}'로 저장되었습니다.")
-    else:
-        output_file.write("검색 결과가 없습니다.\n")
-        print("검색 결과가 없습니다.")
+                            output_file.write(f"    해당 셀 행/열: [{result[2][r][0]}, {rr[0]}]\n")
+                            output_file.write(f"    과거판 내용: {rr[1]}\n")
+                            output_file.write(f"    최신판 내용: {rr[2]}\n\n")
+                            count_diff += 1
 
+                # 결과 저장 알림
+                print(f"작업 결과가 '{output_filename}'로 저장되었습니다.\n")
+
+        else:
+            print(f"파일명: {result[0]}, 시트명: {result[1]} - 차이점 없음")
+else:
+    print("검색 결과가 없습니다.")
 
 # 최신판을 과거판으로 덮어씌울 것인가?
 if count_diff != 0:
     print(f"\n비교 결과, 과거판과 비교하여 최신판에 {count_diff} 건의 변경점이 발견되었습니다.")
+    print(f"검색 결과가 {result_folder} 경로에 저장되었습니다.")
 else:
     print("\n비교 결과, 최신판은 과거판과 차이가 없습니다.")
 
