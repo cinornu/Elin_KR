@@ -15,16 +15,21 @@ game_base-,$여행의 지혜【거점】
 game_base-livestock,주민과 가축
 game_base-policy,정책과 스킬
 game_base-elec,전력
+game_base-civility,시민의식
 game-,$여행의 지혜【편리기능】
 game-autocombat,오토 컴뱃
 game-item_search,아이템 검색
 game-autodump,자동 정리
 game-mark_important,중요한 물건 지정
+game-equip_set,장비 세트
+game-auto_bed,백팩 안 침대 사용
+game-advanced_menu,고급 메뉴
 system-,$여행의 지혜【시스템】
 system-backup,백업의 복원
 custom-,$커스텀 컨텐츠
 custom-map,커스텀 맵
 custom-replace,이미지 변경
+custom-terms2,게임 내 업로드 컨텐츠의 이용 규약
 custom-terms,업로더의 이용 규약
 other-,$크레딧 등
 credits-2,크레딧
