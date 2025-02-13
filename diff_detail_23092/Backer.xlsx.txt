@@ -1,7 +1,0 @@
-파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\Backer.xlsx, 시트명: Backer - 차이점 있음
-
-[최신판에서 변경된 행들]
-    해당 셀 행/열: [500, 3]
-    과거판 내용: None
-    최신판 내용: 来世は室内飼い「たなかす」
-

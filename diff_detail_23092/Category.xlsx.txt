@@ -1,9 +1,0 @@
-파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\Category.xlsx, 시트명: Category - 차이점 있음
-
-[최신판에서 새로 추가된 행들]
-    해당 행 번호: 112
-    해당 행 id: rune
-
-    해당 행 번호: 113
-    해당 행 id: mod
-
