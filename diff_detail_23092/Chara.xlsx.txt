@@ -1,0 +1,58 @@
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\Chara.xlsx, 시트명: Chara - 차이점 있음
+
+[최신판에서 새로 추가된 행들]
+    해당 행 번호: 70
+    해당 행 id: bell_gold
+
+    해당 행 번호: 74
+    해당 행 id: soldier_fallen
+
+    해당 행 번호: 76
+    해당 행 id: master_arena
+
+    해당 행 번호: 123
+    해당 행 id: imp_nether
+
+    해당 행 번호: 124
+    해당 행 id: imp_chaos
+
+    해당 행 번호: 136
+    해당 행 id: slime_plain
+
+    해당 행 번호: 164
+    해당 행 id: raphael
+
+    해당 행 번호: 188
+    해당 행 id: bubble_blue
+
+    해당 행 번호: 201
+    해당 행 id: minotaur_mage
+
+    해당 행 번호: 202
+    해당 행 id: minotaur_boxer
+
+    해당 행 번호: 203
+    해당 행 id: minotaur_fighter
+
+    해당 행 번호: 344
+    해당 행 id: dragon2
+
+    해당 행 번호: 359
+    해당 행 id: dungeon_cleaner
+
+    해당 행 번호: 360
+    해당 행 id: isca
+
+[최신판에서 변경된 행들]
+    해당 셀 행/열: [109, 4]
+    과거판 내용: huting dog
+    최신판 내용: hunting dog
+
+    해당 셀 행/열: [361, 10]
+    과거판 내용: None
+    최신판 내용: *r
+
+    해당 셀 행/열: [361, 11]
+    과거판 내용: None
+    최신판 내용: *r
+

@@ -1,0 +1,11 @@
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\Game.xlsx, 시트명: Game - 차이점 있음
+
+[최신판에서 새로 추가된 행들]
+    해당 행 번호: 922
+    해당 행 id: rune_tooHard
+
+[최신판에서 변경된 행들]
+    해당 셀 행/열: [574, 4]
+    과거판 내용: Noooo! #1 lose(s) balance and  trumble(s).
+    최신판 내용: Noooo! #1 lose(s) balance and  tumble(s).
+

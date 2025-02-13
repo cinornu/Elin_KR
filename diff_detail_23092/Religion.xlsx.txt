@@ -1,0 +1,15 @@
+파일명: D:\Github\Elin_KR\Mod_Korean\Lang\KR\Game\Religion.xlsx, 시트명: Religion - 차이점 있음
+
+[최신판에서 변경된 행들]
+    해당 셀 행/열: [10, 1]
+    과거판 내용: EA 23.37
+    최신판 내용: EA 23.92 Patch 2
+
+    해당 셀 행/열: [10, 6]
+    과거판 내용: She is a graceful Goddess of innocence with beautiful green jade-colored eyes and a lineage of ancient deities. She is Odina's younger sister and Eris's older sister, but her memory of Eris is lacking and the other Gods refuse to discuss the subject. The feathers that fall from the small wings on her head are believed to cure all illnesses and fake feathers are sold for a high price on earth. She is earnest, gentle, yet sometimes fussy. For some reason, she has many radical followers.
+    최신판 내용: She is a graceful Goddess of innocence with beautiful green jade-colored eyes and a lineage of ancient deities. She is the younger sister of the goddesses Odina and Eris, but her memory of Eris is lacking and the other Gods refuse to discuss the subject. The feathers that fall from the small wings on her head are believed to cure all illnesses and fake feathers are sold for a high price on earth. She is earnest, gentle, yet sometimes fussy. For some reason, she has many radical followers.
+
+    해당 셀 행/열: [10, 7]
+    과거판 내용: 翠玉色の美しい瞳を持ち、古き神の血脈を受け継ぐ清純派の女神。女神オディナの妹、また女神エリスの姉であるが、エリスについての記憶は欠けており、他の神々もその話題には触れようとしない。頭の小さな翼から抜け落ちた羽根は万病に効くとされ、地上ではまがい物が高額で取引されている。性格はまじめで優しく気の強いところもある。何故か過激な狂信者が多い。
+    최신판 내용: 翠玉色の美しい瞳を持ち、古き神の血脈を受け継ぐ清純派の女神。女神オディナと女神エリスの妹であるが、エリスについての記憶は欠けており、他の神々もその話題には触れようとしない。頭の小さな翼から抜け落ちた羽根は万病に効くとされ、地上ではまがい物が高額で取引されている。性格はまじめで優しく気の強いところもある。何故か過激な狂信者が多い。
+
