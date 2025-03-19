@@ -162,11 +162,15 @@ for i in range(0, len(array_file)):
 
         while(len(row_curr) != len(row_for_diff)):
             # 새 행이 추가되었을 때 -> prev에 해당 행의 id가 있는지 체크
+            # 만약 dialog 관련 파일일 경우, 10행 (text_jp) 기준 체크
             if len(row_curr) > len(row_for_diff):
                 for target in row_curr:
                     founded = False
                     for p in row_prev:
-                        if target[0] == p[0]:
+                        if "Dialog" not in array_file[i] and target[0] == p[0]:
+                            founded = True
+                            break
+                        elif "Dialog" in array_file[i] and target[9] == p[0]:
                             founded = True
                             break
                     # id를 prev에서 못찾았음 = 이 행이 새로 추가된 행임
@@ -179,7 +183,10 @@ for i in range(0, len(array_file)):
                 for target in row_for_diff:
                     founded = False
                     for p in row_curr_for_check:
-                        if target[0] == p[0]:
+                        if "Dialog" not in array_file[i] and target[0] == p[0]:
+                            founded = True
+                            break
+                        elif "Dialog" in array_file[i] and target[9] == p[0]:
                             founded = True
                             break
                     # id를 curr에서 못찾음 = 이 행은 삭제된 행임
