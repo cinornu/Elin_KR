@@ -186,7 +186,7 @@ for i in range(0, len(array_file)):
                         if "Dialog" not in array_file[i] and target[0] == p[0]:
                             founded = True
                             break
-                        elif "Dialog" in array_file[i] and target[9] == p[0]:
+                        elif "Dialog" in array_file[i] and target[9] == p[9]:
                             founded = True
                             break
                     # id를 curr에서 못찾음 = 이 행은 삭제된 행임
