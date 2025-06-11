@@ -162,13 +162,14 @@ for i in range(0, len(array_file)):
 
         while(len(row_curr) != len(row_for_diff)):
             # 새 행이 추가되었을 때 -> prev에 해당 행의 id가 있는지 체크
-            # 만약 dialog 관련 파일일 경우, 9행과 10행 (id, text_jp) 기준 체크
-            # dialog의 경우, id가 없는 행 (대사가 없고 스크립트 명령만 있는 행) 은 자동 제외
+            # 만약 Drama 관련 파일일 경우, 9행과 10행 (id, text_jp) 기준 체크
+            # Drama의 경우, id가 없는 행 (대사가 없고 스크립트 명령만 있는 행) 은 자동 제외
             if len(row_curr) > len(row_for_diff):
+                #print(f"새 행 추가됨: sheet = {sheet_name}, curr {len(row_curr)} vs diff {len(row_for_diff)}")
                 for target in row_curr:
                     founded = False
                     for p in row_prev:
-                        if "Drama" not in array_file[i] and target[0] == p[0]:
+                        if "Drama" not in array_file[i] and target[0] == p[0] and target[0] != None:
                             founded = True
                             break
                         elif "Drama" in array_file[i] and target[8] == p[8] and target[9] == p[9] and target[9] != None:
@@ -176,19 +177,23 @@ for i in range(0, len(array_file)):
                             break
                     # id를 prev에서 못찾았음 = 이 행이 새로 추가된 행임
                     if not founded:
-                        # dialog 파일의 스크립트 행은 제외 (새 행 배열에 추가하지 않음)
+                        # Drama 파일의 스크립트 행은 제외 (새 행 배열에 추가하지 않음)
                         if "Drama" in array_file[i] and target[8] == None:
+                            row_curr.remove(target)
+                        # id가 None 인 경우 제외
+                        elif "Drama" not in array_file[i] and target[0] == None:
                             row_curr.remove(target)
                         else:
                             # 새 행 배열에 추가하고 기존 배열에서 제거
                             row_new.append(target)
                             row_curr.remove(target)
             # 기존 행이 제거되었을 때 -> curr에 해당 행의 id가 있는지 체크
-            if len(row_curr) < len(row_for_diff):
+            elif len(row_curr) < len(row_for_diff):
+                #print(f"기존 행 제거됨: sheet = {sheet_name}, curr {row_curr} vs diff {row_for_diff}\n")
                 for target in row_for_diff:
                     founded = False
                     for p in row_curr_for_check:
-                        if "Drama" not in array_file[i] and target[0] == p[0]:
+                        if "Drama" not in array_file[i] and target[0] == p[0] and target[0] != None:
                             founded = True
                             break
                         elif "Drama" in array_file[i] and target[8] == p[8] and target[9] == p[9] and target[9] != None:
@@ -196,8 +201,11 @@ for i in range(0, len(array_file)):
                             break
                     # id를 curr에서 못찾음 = 이 행은 삭제된 행임
                     if not founded:
-                        # dialog 파일의 스크립트 행은 제외 (제거된 행 배열에 추가하지 않음)
+                        # Drama 파일의 스크립트 행은 제외 (제거된 행 배열에 추가하지 않음)
                         if "Drama" in array_file[i] and target[8] == None:
+                            row_for_diff.remove(target)
+                        # id가 None 인 경우 제외
+                        elif "Drama" not in array_file[i] and target[0] == None:
                             row_for_diff.remove(target)
                         else:
                             # 제거된 행 배열에 추가하고 기존 배열에서 제거
@@ -250,7 +258,7 @@ if results:
     for result in results:
         # 대상 파일명 추출, 저장할 텍스트 파일명 지정
         filename = result[6]
-        output_filename = result_folder + f"\\{filename}.txt"
+        output_filename = result_folder + f"\\{filename}_sheet-{result[1]}.txt"
         if result[2] != [] or result[3] != [] or result[4] != [] or result[5] != []:
             # 실제로 유효한 결과가 존재할 때만 텍스트 파일로 저장
             with open(output_filename, "w", encoding="utf-8") as output_file:
