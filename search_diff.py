@@ -1,7 +1,7 @@
 import os
 import pathlib
 from openpyxl import load_workbook
-from distutils.dir_util import copy_tree
+from shutil import copytree
 
 print("\n* 알림: Dialog쪽 파일에서는 새로 추가/삭제된 행을 찾는 것이 어려울 수 있습니다. 공백 검색기 등과 병행해 주세요.\n")
 
@@ -19,7 +19,7 @@ if not os.path.isdir('DIFF_PREVIOUS'):
         os.mkdir("DIFF_PREVIOUS")
         os.mkdir("DIFF_PREVIOUS\\Mod_Korean")
 
-        copy_tree(path_dir + "\\Mod_Korean", prev_folder + "\\Mod_Korean")
+        copytree(path_dir + "\\Mod_Korean", prev_folder + "\\Mod_Korean", dirs_exist_ok=True)
 
         print("\n비교 대상 파일을 새로 생성했습니다 (DIFF_PREVIOUS 디렉토리). 프로그램을 종료합니다.")
         exit()
@@ -331,7 +331,8 @@ else:
 
 yes = input("\n현재 최신판을 과거판으로 덮어씌우겠습니까? 작업을 완료한 뒤에 수행해 주십시오. (yes/n): ")
 if yes == "yes" or yes == "YES":
-    copy_tree(path_dir + "\\Mod_Korean", prev_folder + "\\Mod_Korean")
+
+    copytree(path_dir + "\\Mod_Korean", prev_folder + "\\Mod_Korean", dirs_exist_ok=True)
 
     print(f"\n비교 대상 파일을 최신화 하였습니다 (버전 {version}). 프로그램을 종료합니다.")
     exit()
