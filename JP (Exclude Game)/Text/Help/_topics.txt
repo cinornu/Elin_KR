@@ -31,6 +31,7 @@ custom-map,カスタムマップ
 custom-replace,画像の差し替え
 custom-terms2,ユーザーコンテンツ利用規約
 custom-terms,アップローダー利用規約
+custom-terms3,Mod製作ガイドライン
 other-,$クレジットなど
 credits-2,クレジット
 credits-1,素材提供
