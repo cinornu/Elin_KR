@@ -31,6 +31,7 @@ custom-map,커스텀 맵
 custom-replace,이미지 변경
 custom-terms2,게임 내 업로드 컨텐츠의 이용 규약
 custom-terms,업로더의 이용 규약
+custom-terms3,Mod 제작 가이드라인
 other-,$크레딧 등
 credits-2,크레딧
 credits-1,소재 제공
