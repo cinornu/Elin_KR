@@ -1,13 +1,13 @@
 Updated Language Files:
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/General.xlsx
-version:2699  text:2696  
+version:2793  text:2790  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/List.xlsx
 version:117  text:116  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Game.xlsx
-version:1011  text:1010  
+version:1018  text:1017  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Word.xlsx
 version:484  name:484  
@@ -16,10 +16,10 @@ version:484  name:484
 version:12  text:12  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Chara.xlsx
-version:590  name:590  detail:1  aka:240  
+version:602  name:602  detail:1  aka:247  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/CharaText.xlsx
-version:132  calm:99  fov:16  aggro:91  dead:103  kill:91  
+version:133  calm:100  fov:16  aggro:92  dead:104  kill:92  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Tactics.xlsx
 version:16  name:16  detail:0  
@@ -28,10 +28,10 @@ version:16  name:16  detail:0
 version:40  name:38  detail:0  aka:6  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Thing.xlsx
-version:2549  name:2549  detail:537  unit:2549  unknown:82  roomName:119  name2:86  
+version:2587  name:2587  detail:546  unit:2587  unknown:85  roomName:120  name2:86  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Element.xlsx
-version:1099  name:1099  detail:747  altname:19  textPhase:360  textExtra:440  textInc:63  textDec:61  textAlt:52  adjective:0  levelBonus:4  
+version:1122  name:1122  detail:767  altname:19  textPhase:362  textExtra:460  textInc:63  textDec:61  textAlt:52  adjective:0  levelBonus:4  
 
 (No Changes) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Calc.xlsx
 
@@ -41,7 +41,7 @@ version:1099  name:1099  detail:747  altname:19  textPhase:360  textExtra:440  t
 version:95  name:95  detail:20  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Category.xlsx
-version:140  name:140  
+version:141  name:141  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Material.xlsx
 version:115  name:115  altName:109  
@@ -49,7 +49,7 @@ version:115  name:115  altName:109
 (No Changes) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/SpawnList.xlsx
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Block.xlsx
-version:218  name:217  detail:3  
+version:220  name:219  detail:3  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Floor.xlsx
 version:150  name:149  detail:0  
@@ -61,7 +61,7 @@ version:9  name:8  detail:0
 version:8  name:7  detail:0  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Obj.xlsx
-version:150  name:150  detail:0  
+version:153  name:153  detail:0  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Faction.xlsx
 version:12  name:12  detail:0  textType:0  
@@ -79,13 +79,13 @@ version:53  name:53  detail:7
 version:147  name:91  detail:134  talkProgress:0  talkComplete:2  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Stat.xlsx
-version:103  name:103  detail:95  strPhase:97  textPhase:81  textPhase2:4  textEnd:68  
+version:104  name:104  detail:96  strPhase:98  textPhase:81  textPhase2:4  textEnd:68  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Area.xlsx
 version:12  name:12  detail:4  textAssign:5  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/Zone.xlsx
-version:102  name:102  detail:8  textFlavor:36  
+version:104  name:104  detail:8  textFlavor:37  
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR/Game/ZoneAffix.xlsx
 version:40  name:40  detail:0  
@@ -128,6 +128,9 @@ version:14  name:14  detail:14
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR\Dialog\Drama\demitas.xlsx(demitas)
 8
+
+(Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR\Dialog\Drama\doorman_wynan.xlsx(raphael)
+4
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR\Dialog\Drama\elder_exile.xlsx(raphael)
 42
@@ -199,7 +202,7 @@ version:14  name:14  detail:14
 1
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR\Dialog\Drama\sorin.xlsx(sorin)
-1
+7
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR\Dialog\Drama\tyche.xlsx(tyche)
 20
@@ -250,7 +253,7 @@ version:14  name:14  detail:14
 8
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR\Data\chara_talk.xlsx(1)
-6298
+6345
 
 (Updated) D:\SteamLibrary\steamapps\common\Elin\Package\Mod_Korean\Lang\KR\Data\god_talk.xlsx(1)
 280
